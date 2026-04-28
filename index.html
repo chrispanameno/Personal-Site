@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris Panameno — Saxophonist</title>
+  <meta name="description" content="Chris Panameno — Saxophonist available for live events, studio sessions, and private performances.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────── -->
+  <nav>
+    <span class="nav-name">Chris Panameno</span>
+    <a href="mailto:chrispanamenomusic@gmail.com" class="nav-contact">Get in Touch</a>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────── -->
+  <header class="hero">
+    <p class="hero-tagline">Saxophonist &amp; Performer</p>
+    <h1>Chris<br>Panameno</h1>
+    <p class="hero-sub">Available for live events, studio sessions &amp; private performances</p>
+  </header>
+
+  <!-- ── GALLERY ───────────────────────────────────── -->
+  <section class="gallery-section">
+    <div class="gallery-grid" id="gallery">
+      <!-- Filled dynamically from gallery-config.js -->
+    </div>
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────────── -->
+  <section class="about">
+    <div class="about-inner">
+
+      <div class="portrait-wrap">
+        <!--
+          PORTRAIT: Replace the src below with your photo filename.
+          Drop the file into media/portrait/ and update the path here.
+          Example: src="media/portrait/chris.jpg"
+        -->
+        <img
+          src="media/portrait/portrait.jpg"
+          alt="Chris Panameno, Saxophonist"
+          class="portrait"
+          onerror="this.outerHTML='<div class=\'portrait-placeholder\'>Drop your portrait into<br>media/portrait/</div>'"
+        >
+      </div>
+
+      <div class="about-text">
+        <h2>A Voice in Every Note</h2>
+        <p>
+          With over a decade of performance experience, Chris Panameno brings a
+          rich, soulful voice to the saxophone that has moved audiences from
+          intimate jazz clubs to sweeping concert stages. His playing draws
+          from classic jazz, contemporary R&amp;B, and the warm Latin rhythms of
+          his heritage — creating a sound that is immediately recognisable and
+          deeply personal.
+        </p>
+        <p>
+          Chris has shared the stage with celebrated ensembles across the
+          country and has contributed to recordings that span jazz, pop, and
+          everything in between. Whether leading his own quartet or appearing
+          as a featured soloist, he brings precision, instinct, and an
+          unmistakable warmth to every performance.
+        </p>
+        <p>
+          Music, for Chris, is a conversation — and he invites you to be part
+          of it.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SERVICES ──────────────────────────────────── -->
+  <section class="services">
+    <div class="services-inner">
+      <h2>Work With Me</h2>
+      <div class="divider"></div>
+      <div class="services-grid">
+
+        <div class="service-item">
+          <h3>Live Performance</h3>
+          <p>
+            From wedding ceremonies and corporate galas to jazz festivals and
+            private dinner parties, Chris delivers a live experience that
+            elevates any occasion. Duo, trio, and full band configurations
+            are available to suit the scale and mood of your event.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <h3>Studio Sessions</h3>
+          <p>
+            Looking for a distinctive saxophone voice on your next record?
+            Chris brings versatility and professionalism to the studio,
+            adapting seamlessly to your vision — whether you need a breathy
+            ballad tone, a cutting bebop line, or something entirely new.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <h3>Private Lessons</h3>
+          <p>
+            Committed to passing on the craft, Chris offers private lessons
+            for players at every level — from beginners taking their first
+            breath to working musicians refining their technique and expanding
+            their musical vocabulary.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ───────────────────────────────────── -->
+  <section class="contact">
+    <h2>Let's Create Something Together</h2>
+    <div class="divider"></div>
+    <p>For bookings, session inquiries, and press, reach out directly.</p>
+    <a href="mailto:chrispanamenomusic@gmail.com" class="contact-link">
+      chrispanamenomusic@gmail.com
+    </a>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────── -->
+  <footer>
+    <p>&copy; 2026 Chris Panameno. All rights reserved.</p>
+  </footer>
+
+
+  <!-- ── GALLERY SCRIPT ────────────────────────────── -->
+  <!--
+    gallery-config.js defines the  galleryMedia  array.
+    The script below reads it and builds the mosaic grid.
+    You don't need to touch anything here.
+  -->
+  <script src="gallery-config.js"></script>
+  <script>
+    (function () {
+      var grid = document.getElementById('gallery');
+      if (!grid) return;
+
+      // Size pattern for mosaic variety
+      // 'n' = normal, 'w' = wide (2 cols), 't' = tall (2 rows), 'b' = big (2×2)
+      var pattern = ['t','n','w','n','n','b','w','n','t','n','n','w'];
+
+      if (!window.galleryMedia || galleryMedia.length === 0) {
+        var empty = document.createElement('div');
+        empty.className = 'gallery-empty';
+        empty.textContent = 'Add your photos and videos to gallery-config.js to see them here.';
+        grid.appendChild(empty);
+        return;
+      }
+
+      var videoExts = ['mp4','mov','webm','ogg'];
+
+      galleryMedia.forEach(function (filename, i) {
+        var ext = filename.split('.').pop().toLowerCase();
+        var isVideo = videoExts.indexOf(ext) > -1;
+        var sizeKey = pattern[i % pattern.length];
+
+        var item = document.createElement('div');
+        item.className = 'gallery-item';
+        if (sizeKey === 'w') item.classList.add('wide');
+        if (sizeKey === 't') item.classList.add('tall');
+        if (sizeKey === 'b') item.classList.add('big');
+
+        if (isVideo) {
+          var vid = document.createElement('video');
+          vid.src = 'media/gallery/' + filename;
+          vid.autoplay = true;
+          vid.muted = true;
+          vid.loop = true;
+          vid.playsInline = true;
+          vid.setAttribute('playsinline', '');
+          item.appendChild(vid);
+        } else {
+          var img = document.createElement('img');
+          img.src = 'media/gallery/' + filename;
+          img.alt = '';
+          img.loading = 'lazy';
+          item.appendChild(img);
+        }
+
+        grid.appendChild(item);
+      });
+    })();
+  </script>
+
+</body>
+</html>
