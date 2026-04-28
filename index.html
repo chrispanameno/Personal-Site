@@ -4,188 +4,231 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chris Panameno — Saxophonist</title>
-  <meta name="description" content="Chris Panameno — Saxophonist available for live events, studio sessions, and private performances.">
+  <meta name="description" content="Chris Panameno — Saxophonist available for live performances, studio sessions, and private events.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ── NAV ─────────────────────────────────────── -->
-  <nav>
+  <!-- ─────────────────────────── NAV -->
+  <nav id="nav">
     <span class="nav-name">Chris Panameno</span>
-    <a href="mailto:chrispanamenomusic@gmail.com" class="nav-contact">Get in Touch</a>
+    <a href="mailto:chrispanamenomusic@gmail.com" class="nav-contact">Enquire</a>
   </nav>
 
-  <!-- ── HERO ─────────────────────────────────────── -->
+  <!-- ─────────────────────────── HERO -->
   <header class="hero">
-    <p class="hero-tagline">Saxophonist &amp; Performer</p>
-    <h1>Chris<br>Panameno</h1>
-    <p class="hero-sub">Available for live events, studio sessions &amp; private performances</p>
+
+    <!--
+      HERO BACKGROUND IMAGE (optional but recommended)
+      Drop a landscape/portrait performance photo named  hero.jpg
+      into the  media/  folder and it will appear here as a subtle backdrop.
+    -->
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+      <span class="label">Saxophonist &amp; Performer</span>
+      <h1>Chris<br>Panameno</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-sub">New York &nbsp;·&nbsp; Available Worldwide</p>
+    </div>
+
+    <div class="hero-scroll">Scroll</div>
+
   </header>
 
-  <!-- ── GALLERY ───────────────────────────────────── -->
+  <!-- ─────────────────────────── GALLERY -->
+  <!--
+    To populate this gallery:
+      1. Drop your photos (.jpg .png .webp) and videos (.mp4 .mov) into  media/gallery/
+      2. Open  gallery-config.js  and add each filename to the list
+    The mosaic layout is handled automatically.
+  -->
   <section class="gallery-section">
-    <div class="gallery-grid" id="gallery">
-      <!-- Filled dynamically from gallery-config.js -->
-    </div>
+    <div class="gallery-grid" id="gallery"></div>
   </section>
 
-  <!-- ── ABOUT ─────────────────────────────────────── -->
+  <!-- ─────────────────────────── ABOUT -->
   <section class="about">
     <div class="about-inner">
 
-      <div class="portrait-wrap">
+      <div class="portrait-wrap reveal">
         <!--
-          PORTRAIT: Replace the src below with your photo filename.
-          Drop the file into media/portrait/ and update the path here.
-          Example: src="media/portrait/chris.jpg"
+          PORTRAIT: Drop your photo into  media/portrait/
+          and update the filename below (e.g. "portrait.jpg").
         -->
         <img
           src="media/portrait/portrait.jpg"
-          alt="Chris Panameno, Saxophonist"
+          alt="Chris Panameno"
           class="portrait"
-          onerror="this.outerHTML='<div class=\'portrait-placeholder\'>Drop your portrait into<br>media/portrait/</div>'"
+          onerror="this.outerHTML='<div class=\'portrait-placeholder\'>Place your portrait in<br>media / portrait /</div>'"
         >
       </div>
 
-      <div class="about-text">
-        <h2>A Voice in Every Note</h2>
+      <div class="about-text reveal">
+        <span class="label">About</span>
+        <h2>A Voice Shaped<br>by Two Worlds</h2>
         <p>
-          With over a decade of performance experience, Chris Panameno brings a
-          rich, soulful voice to the saxophone that has moved audiences from
-          intimate jazz clubs to sweeping concert stages. His playing draws
-          from classic jazz, contemporary R&amp;B, and the warm Latin rhythms of
-          his heritage — creating a sound that is immediately recognisable and
-          deeply personal.
+          Chris Panameno is a saxophonist whose playing moves fluidly between
+          the warmth of classic jazz and the rhythmic pulse of Latin music.
+          Raised between two cultures and two musical traditions, he has
+          developed a voice that is unmistakably his own — expressive,
+          considered, and deeply felt.
         </p>
         <p>
-          Chris has shared the stage with celebrated ensembles across the
-          country and has contributed to recordings that span jazz, pop, and
-          everything in between. Whether leading his own quartet or appearing
-          as a featured soloist, he brings precision, instinct, and an
-          unmistakable warmth to every performance.
+          Over more than a decade of performance, Chris has appeared at
+          celebrated venues across the country, collaborated with ensembles
+          at the forefront of contemporary jazz, and contributed to recordings
+          spanning jazz, R&amp;B, and Latin music. His playing has been
+          described as both technically impeccable and emotionally immediate.
         </p>
         <p>
-          Music, for Chris, is a conversation — and he invites you to be part
-          of it.
+          Whether performing for an intimate gathering or a grand occasion,
+          Chris brings the same commitment: music that stays with you long
+          after the last note fades.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- ── SERVICES ──────────────────────────────────── -->
+  <!-- ─────────────────────────── SERVICES -->
   <section class="services">
     <div class="services-inner">
-      <h2>Work With Me</h2>
-      <div class="divider"></div>
-      <div class="services-grid">
+      <span class="label">Offerings</span>
+      <h2>Work With Chris</h2>
+      <div class="thin-rule"></div>
 
-        <div class="service-item">
-          <h3>Live Performance</h3>
-          <p>
-            From wedding ceremonies and corporate galas to jazz festivals and
-            private dinner parties, Chris delivers a live experience that
-            elevates any occasion. Duo, trio, and full band configurations
-            are available to suit the scale and mood of your event.
-          </p>
-        </div>
-
-        <div class="service-item">
-          <h3>Studio Sessions</h3>
-          <p>
-            Looking for a distinctive saxophone voice on your next record?
-            Chris brings versatility and professionalism to the studio,
-            adapting seamlessly to your vision — whether you need a breathy
-            ballad tone, a cutting bebop line, or something entirely new.
-          </p>
-        </div>
-
-        <div class="service-item">
-          <h3>Private Lessons</h3>
-          <p>
-            Committed to passing on the craft, Chris offers private lessons
-            for players at every level — from beginners taking their first
-            breath to working musicians refining their technique and expanding
-            their musical vocabulary.
-          </p>
-        </div>
-
+      <div class="service-item reveal">
+        <h3>Live Performance</h3>
+        <p>
+          From intimate private dinners to large-scale galas, weddings, and
+          concert engagements — Chris delivers a live experience tailored
+          precisely to your event. Configurations range from solo and duo
+          to full ensemble, accommodating any setting or atmosphere.
+        </p>
       </div>
+
+      <div class="service-item reveal">
+        <h3>Studio &amp; Session Work</h3>
+        <p>
+          Chris brings a refined and versatile studio presence to any
+          recording project. Whether your production calls for a lyrical
+          ballad tone, a commanding bebop statement, or something entirely
+          singular, he will find the sound your music demands.
+        </p>
+      </div>
+
+      <div class="service-item reveal">
+        <h3>Private Instruction</h3>
+        <p>
+          Dedicated to the continuity of the art, Chris offers private
+          lessons to students at every stage — from those just beginning
+          their relationship with the instrument to advanced players seeking
+          to deepen their musical language and interpretive range.
+        </p>
+      </div>
+
     </div>
   </section>
 
-  <!-- ── CONTACT ───────────────────────────────────── -->
+  <!-- ─────────────────────────── CONTACT -->
   <section class="contact">
-    <h2>Let's Create Something Together</h2>
-    <div class="divider"></div>
-    <p>For bookings, session inquiries, and press, reach out directly.</p>
+    <span class="label">Contact</span>
+    <h2>Begin a Conversation</h2>
+    <div class="thin-rule"></div>
+    <p>For performance bookings, session enquiries, and press.</p>
     <a href="mailto:chrispanamenomusic@gmail.com" class="contact-link">
       chrispanamenomusic@gmail.com
     </a>
   </section>
 
-  <!-- ── FOOTER ────────────────────────────────────── -->
+  <!-- ─────────────────────────── FOOTER -->
   <footer>
-    <p>&copy; 2026 Chris Panameno. All rights reserved.</p>
+    <p>&copy; 2026 Chris Panameno &nbsp;·&nbsp; All rights reserved</p>
   </footer>
 
 
-  <!-- ── GALLERY SCRIPT ────────────────────────────── -->
-  <!--
-    gallery-config.js defines the  galleryMedia  array.
-    The script below reads it and builds the mosaic grid.
-    You don't need to touch anything here.
-  -->
+  <!-- ─────────────────────────── SCRIPTS -->
   <script src="gallery-config.js"></script>
   <script>
+    /* ── Gallery builder ── */
     (function () {
       var grid = document.getElementById('gallery');
       if (!grid) return;
 
-      // Size pattern for mosaic variety
-      // 'n' = normal, 'w' = wide (2 cols), 't' = tall (2 rows), 'b' = big (2×2)
-      var pattern = ['t','n','w','n','n','b','w','n','t','n','n','w'];
+      var pattern = ['t','n','w','n','n','b','w','n','t','n','n','w','n','n','w','t'];
+      var videoExts = ['mp4','mov','webm','ogg'];
 
       if (!window.galleryMedia || galleryMedia.length === 0) {
         var empty = document.createElement('div');
         empty.className = 'gallery-empty';
-        empty.textContent = 'Add your photos and videos to gallery-config.js to see them here.';
+        empty.textContent = 'Add your photos and videos via gallery-config.js';
         grid.appendChild(empty);
         return;
       }
 
-      var videoExts = ['mp4','mov','webm','ogg'];
-
       galleryMedia.forEach(function (filename, i) {
         var ext = filename.split('.').pop().toLowerCase();
         var isVideo = videoExts.indexOf(ext) > -1;
-        var sizeKey = pattern[i % pattern.length];
+        var size = pattern[i % pattern.length];
 
         var item = document.createElement('div');
         item.className = 'gallery-item';
-        if (sizeKey === 'w') item.classList.add('wide');
-        if (sizeKey === 't') item.classList.add('tall');
-        if (sizeKey === 'b') item.classList.add('big');
+        if (size === 'w') item.classList.add('wide');
+        if (size === 't') item.classList.add('tall');
+        if (size === 'b') item.classList.add('big');
 
         if (isVideo) {
           var vid = document.createElement('video');
           vid.src = 'media/gallery/' + filename;
           vid.autoplay = true;
-          vid.muted = true;
-          vid.loop = true;
+          vid.muted    = true;
+          vid.loop     = true;
           vid.playsInline = true;
           vid.setAttribute('playsinline', '');
           item.appendChild(vid);
         } else {
           var img = document.createElement('img');
-          img.src = 'media/gallery/' + filename;
-          img.alt = '';
+          img.src     = 'media/gallery/' + filename;
+          img.alt     = '';
           img.loading = 'lazy';
           item.appendChild(img);
         }
 
         grid.appendChild(item);
       });
+    })();
+
+    /* ── Nav background on scroll ── */
+    (function () {
+      var nav = document.getElementById('nav');
+      function update() {
+        if (window.scrollY > 60) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    })();
+
+    /* ── Reveal on scroll ── */
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function(el){ el.classList.add('visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function(el){ observer.observe(el); });
     })();
   </script>
 
